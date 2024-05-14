@@ -6,7 +6,10 @@
     cursor: none;
     z-index: 1;
     pointer-events: auto;
-    /* outline: 2px solid rgba(256, 0, 0, 0.3); */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 html {
@@ -51,6 +54,7 @@ body {
     z-index: 99999;
 	/* mix-blend-mode: exclusion; */
     pointer-events: none;
+    transition: all -0.2s;
 }
 
 #cursorText {
@@ -63,6 +67,7 @@ body {
     background-color: #e5e5e5;
     color: #14213d;
 	mix-blend-mode: difference;
+    transition: all .2s;
 }
 
 #cursorText, #cursorImg {
@@ -70,12 +75,14 @@ body {
     font-weight: bold;
     position: absolute;
 	transform: translate(12px, 21px);
+    transition: all .2s;
 }
 
 #cursorImg {
     border-radius: 10px;
     max-width: 250px;
     mix-blend-mode: unset;
+    transition: all .2s;
 }
 
 @keyframes fadein {
@@ -184,18 +191,19 @@ header {
 
 #greetings {
     margin-top: 0.5em;
-    font-size: 1em;
+    font-size: 20px;
     justify-self: center;
+    padding-right: 2px;
 }
 
 #retype {
-    border-right: solid 2px red;
+    border-right: solid 3px red;
     animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
     50% {
-        border-right: solid 2px transparent;
+        border-right: solid 3px transparent;
     }
 }
 
@@ -249,7 +257,8 @@ section {
     margin-left: 50px;
     border: 1px solid #14213d;
     border-radius: 0.3em;
-    transition: transform 0.2s;
+    transition: all 0.2s;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .projectsDiv-innerDiv {
@@ -263,17 +272,17 @@ section {
     font-size: large;
     float: right;
     color: black;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
 
 .projectsDiv-link:hover {
-    text-decoration-style: dashed;
+    text-decoration: none;
     transform: scale(1.02);
-    outline: 1px solid rgba(256, 0, 0, 0.3);
 } 
 
 .projectThumbnail:hover {
     transform: scale(1.05);
+    box-shadow: none;
 }
 
 .projectsDiv-icons {
@@ -355,7 +364,7 @@ section {
     border: 1px solid black;
     padding: 3px;
     margin: 0 auto;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
 
 .sectionBody-button-small:hover {
@@ -384,7 +393,7 @@ section {
     font-weight: bold;
     font-size: 1.5em;
     letter-spacing: 0.2em;
-    transition: transform .2s;
+    transition: all .2s;
     z-index: 3;
     pointer-events: auto; 
 }
@@ -428,6 +437,10 @@ section {
 }
 
 /* FOOTER STYLES */
+
+#outlineCheck {
+    scale: 1.2;
+}
 
 #upperFooter {
     text-align: left;

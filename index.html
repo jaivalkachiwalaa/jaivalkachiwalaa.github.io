@@ -9,6 +9,7 @@
 
     <!-- links -->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" id="outlineCss" href="styles/outline_n.css">
     <link rel="shortcut icon" href="images/bolt-solid.svg" type="image/x-icon">
     <script src="scripts/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -64,7 +65,7 @@
             <p id="Name">Jaival Kachiwala</p>
             <p id="description">Web Developer<i class="fa-regular fa-desktop"></i></p>
             <div id="greeting-div">
-                <pre id="greetings">- <span id="retype" style="font-weight: bold;">Hello</span> -</pre>
+                <div id="greetings">- <span id="retype" style="font-weight: bold;">Hello</span> -</div>
             </div>
             <br>
             <br>
@@ -76,7 +77,7 @@
     <!-- Section -->
     <section class="sectionBody">
         <div id="projectsDiv" class="rounded">
-            <i class="sectionBody-icons fa-regular fa-rectangle-history"></i>Projects<i class="fa-regular fa-globe"></i>
+            <i class="sectionBody-icons fa-regular fa-rectangle-history"></i>Projects
 
             <!-- Project1 -->
             <div onmouseover="mouseOver(`Name Badge Generator`, ``)" onmouseout="mouseOut()" class="innerProjectsDiv rounded" id="project1">
@@ -110,7 +111,10 @@
         <hr><br><br><br>
         <div id="upperFooter">
             <h3>OPTIONS <i class="fa-regular fa-gear fa-spin fa-spin-reverse"></i></h3><br>
-            <input type="checkbox" onclick="outlineCheck()" id="outlineCheck"> <span>Show Outline</span>
+            <label for="outlineCheckbox">
+                <input type="checkbox" onclick="outlineCheck()" id="outlineCheckbox"> <span>Show Outline</span>
+            </label>
+            
         </div>
         <br><br><br>
         <hr><br><br><br>
@@ -128,6 +132,7 @@
 
     <script src="scripts/greetings-retype.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/outlineCheck.js"></script>
     <script>
         function mouseOver(textToShow, ImgToShow) {
             var showText = textToShow;
