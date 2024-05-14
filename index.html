@@ -1,1 +1,207 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaival Kachiwala | Personal Portfolio Website</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/bolt-solid.svg" type="image/x-icon">
+    <script src="scripts/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        .anonymous-pro-regular {
+          font-family: "Anonymous Pro", monospace;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .anonymous-pro-bold {
+          font-family: "Anonymous Pro", monospace;
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        .anonymous-pro-regular-italic {
+          font-family: "Anonymous Pro", monospace;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        .anonymous-pro-bold-italic {
+          font-family: "Anonymous Pro", monospace;
+          font-weight: 700;
+          font-style: italic;
+        }
+
+    </style>
+
+
+</head>
+
+<body onload="clock()">
+
+    <div class="circularcursor"><img id="cursorImg" src=""><span id="cursorText"></span></div>
+
+    <!-- header -->
+    <header>
+        <div id="headerDiv">
+            <div class="magnetic" id="profilePicDiv"><img id="profileImage" src="images/logo.png" alt="profile image"></div>
+            <p id="Name">Jaival Kachiwala</p>
+            <p id="description">Web Developer<i class="fa-regular fa-desktop"></i></p>
+            <div id="greeting-div">
+                <pre id="greetings">- <span id="retype" style="font-weight: bold;">Hello</span> -</pre>
+            </div>
+            <br>
+            <br>
+            <!-- <i class="fa-regular fa-angles-down"></i> -->
+        </div>
+    </header>
+
+
+    <!-- Section -->
+    <section class="sectionBody">
+        <div id="projectsDiv" class="rounded">
+            <i class="sectionBody-icons fa-regular fa-rectangle-history"></i>Projects<i class="fa-regular fa-globe"></i>
+
+            <!-- Project1 -->
+            <div onmouseover="mouseOver(`Name Badge Generator`, ``)" onmouseout="mouseOut()" class="innerProjectsDiv rounded" id="project1">
+                <img class="projectThumbnail" src="images/projects-images/badge Website image.png" alt="Name Badge Generator">
+                <div class="projectsDiv-innerDiv">
+                    <a class="projectsDiv-link" href="https://www.links.rf.gd/name-badge/">Name Badge Generator<i class="projectsDiv-icons fa-regular fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <br>
+        <hr><br>
+
+        <div class="start" id="contactsDiv">
+            Contact Me <br><br>
+            <button onmouseover="mouseOver(`Instagram @jaivalkachiwalaa`, ``)" onmouseout="mouseOut()" id="instagramButton" onclick="window.location.assign('https://instagram.com/jaivalkachiwalaa')" class="sectionBody-button-small middle"><i class="sectionBody-small-icons fa-brands fa-instagram fa-fw"></i></button>
+            <button onmouseover="mouseOver(`Telegram @jaivalkachiwalaa`, ``)" onmouseout="mouseOut()" id="telegramButton" onclick="window.location.assign('http://t.me/jaivalkachiwalaa')" class="sectionBody-button-small middle"><i class="sectionBody-small-icons fa-brands fa-telegram fa-fw"></i></button>
+            <button onmouseover="mouseOver(`Twitter`, ``)" onmouseout="mouseOut()" id="xButton" onclick="window.location.assign('https://x.com/notJaival?t=_TNlLNbZ6LnGHziwXBOBcA&s=09')" class="sectionBody-button-small middle"><i class="sectionBody-small-icons fa-brands fa-x-twitter fa-fw"></i></button>
+            <button onmouseover="mouseOver(`Mail kachiwalajaival@gmail.com`, ``)" onmouseout="mouseOut()" id="mailButton" onclick="window.location.assign('mailto:kachiwalajaival@gmail.com')" class="sectionBody-button-small middle"><i class="sectionBody-small-icons fa-regular fa-envelope fa-fw"></i></button>
+            <!-- <button onmouseover="mouseOver(`Mail kachiwalajaival@gmail.com`, ``)" onmouseout="mouseOut()" id="mailButton" onclick="window.location.assign('mailto:kachiwalajaival@gmail.com')" class="sectionBody-button-small middle"><i class="sectionBody-icons fa-regular fa-envelope"></i><i class="fa-solid fa-arrow-up-right"></i></button> -->
+        </div>
+
+        <button onmouseover="mouseOver(`UPI`, ``)" onmouseout="mouseOut()" onclick="window.location.assign('upi')" class="sectionBody-button middle"><img src="images/upi.png"> UPI<i class="fa-solid fa-arrow-up-right"></i></button>
+        <button onmouseover="mouseOver(`Bitcoin`, ``)" onmouseout="mouseOut()" onclick="window.location.assign('bitcoin')" class="sectionBody-button end"><i class="sectionBody-icons fa-brands fa-bitcoin"></i>Bitcoin<i class="fa-solid fa-arrow-up-right"></i></button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer onmouseover="mouseOver(`Made with HTML, CSS and JS`, ``)" onmouseout="mouseOut()" id="footer">
+        <hr><br><br><br>
+        <div id="upperFooter">
+            <h3>OPTIONS <i class="fa-regular fa-gear fa-spin fa-spin-reverse"></i></h3><br>
+            <input type="checkbox" onclick="outlineCheck()" id="outlineCheck"> <span>Show Outline</span>
+        </div>
+        <br><br><br>
+        <hr><br><br><br>
+        <div>
+            <i class="fa-regular fa-calendar-days"></i>
+            <b id="footerDate">00/00/0000</b>
+            <i class="fa-solid fa-clock"></i>
+            <b id="footerTime">00:00:00</b>
+        </div><br>
+        <h3 style="font-size: large; text-align:center;">Made with <i class="fa-solid fa-heart"> </i> by Jaival</h3><br>
+        <h3 style="font-size: large; text-align:center;">Made with <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-js"></i></h3>
+    </footer>
+
+
+
+    <script src="scripts/greetings-retype.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        function mouseOver(textToShow, ImgToShow) {
+            var showText = textToShow;
+            var showImg = ImgToShow;
+            if (showText != ``) {
+                document.querySelector("#cursorText").style.opacity = 1;
+            }
+            document.querySelector("#cursorText").innerHTML = showText;
+            document.querySelector("#cursorImg").src = showImg;
+        }
+
+        function mouseOut() {
+            document.querySelector("#cursorText").style.opacity = 0;
+            document.querySelector("#cursorText").innerHTML = "";
+            document.querySelector("#cursorImg").src = ``;
+        }
+
+        const ball = document.querySelector('.circularcursor');
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let ballX = 0;
+        let ballY = 0;
+
+        let speed = 0.2;
+
+        // Update ball position
+        function animate() {
+            //Determine distance between ball and mouse
+            let distX = mouseX - ballX;
+            let distY = mouseY - ballY;
+
+            // Find position of ball and some distance * speed
+            ballX = ballX + (distX * speed);
+            ballY = ballY + (distY * speed);
+
+            ball.style.left = ballX + "px";
+            ball.style.top = ballY + "px";
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Move ball with cursor
+        document.addEventListener("mousemove", function (event) {
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+    </script>
+
+</script>
+
+<script type="text/javascript">
+    const btns = document.querySelectorAll(".magnetic");
+
+    btns.forEach((btn) => {
+      btn.addEventListener("mousemove", function(e){
+        const position = btn.getBoundingClientRect();
+        const x = e.pageX - position.left - position.width / 2;
+        const y = e.pageY - position.top - position.height / 2;
+
+        btn.children[0].style.transform = "translate(" + x * 0.3 + "px, " + y * 0.5 + "px)";
+      });
+    });
+
+    btns.forEach((btn) => {
+      btn.addEventListener("mouseout", function(e){
+        btn.children[0].style.transform = "translate(0px, 0px)";
+      });
+    });
+    </script>
+
+</body>
+
+</html>
