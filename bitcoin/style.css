@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: monospace; */
+    font-family: "Anonymous Pro", monospace;
+    color: #e5e5e5;
+    cursor: none;
+    z-index: 1;
+    pointer-events: auto; 
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #14213d;
+    pointer-events: none;
+
+
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+}
+
+body {
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.circularcursor {
+    background: #e5e5e5;
+    border: 2px solid #14213d;
+	width: 25px;
+	height: 25px;
+	border-radius: 10% 60% 60% 60%;
+	position: absolute;
+	top: -500;
+	left: -500;
+    z-index: 99999;
+	/* mix-blend-mode: exclusion; */
+    pointer-events: none;
+}
+
+#cursorText {
+    opacity: 0;
+    width: 150px;
+    overflow-wrap: break-word;
+    padding: 3px;
+    border-radius: 3px;
+    border: 2px solid #14213d;
+    background-color: #e5e5e5;
+    color: #14213d;
+	mix-blend-mode: difference;
+}
+
+#cursorText, #cursorImg {
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+	transform: translate(12px, 21px);
+}
+
+#cursorImg {
+    border-radius: 10px;
+    max-width: 250px;
+    mix-blend-mode: unset;
+}
+
+/* HEADER STYLES */
+
+#profilePicDiv {
+    height: 1.5in;
+    width: 1.5in;
+    margin: 0 auto;
+}
+
+#profileImage {
+    height: 1.5in;
+    width: 1.5in;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+    z-index: 3;
+}
+
+#profileImage:hover {
+    transform: scale(1.02);
+}
+
+header {
+    justify-content: left;
+    margin: 2em;
+}
+
+#Name {
+    font-size: xxx-large;
+    margin-top: 1em;
+    font-weight: bolder;
+    transition: transform 0.2s;
+    transform: translateY(-1px);
+    animation-name: floatingUpDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: linear;
+}
+#Name:hover {
+    transform: scale(1.02);
+}
+
+#lastName {
+    animation-name: floatingUpDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: linear;
+}
+
+@keyframes floatingUpDown {
+    0% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(-1px);
+    }
+}
+
+#description {
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    margin-top: 0.5em;
+    opacity: 0.7;
+    animation-name: floatingUpDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: linear;
+}
+
+.fa-desktop {
+    position: relative;
+    top: 0.1em;
+    margin-left: 0.3em;
+    transform: scale(0.8);
+    animation-name: floatingUpDown;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-fill-mode: linear;
+    animation-delay: 0.3s;
+}
+
+.fa-desktop {
+    position: relative;
+    top: 0.1em;
+    margin-left: 0.3em;
+    transform: scale(0.8);
+}
+
+/* SECTION STYLES */
+
+.start {
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+
+.middle {
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+
+.end {
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+#Bitcoin {
+    font-size: xxx-large;
+    margin-top: 1em;
+    font-weight: bolder;
+    transition: transform 0.2s;
+}
+
+#Bitcoin:hover {
+    transform: scale(1.1);
+}
+
+#bitcoinAddress {
+    margin: auto;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    background-color: #e5e5e5;
+    color: black;
+    width: 80%;
+    padding: 1.5em 0;
+}
+
+.sectionBody-button {
+    margin: 0.1em auto;
+    width: 80%;
+    height: 3em;
+    border: none;
+    background-color: #e5e5e5;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+    transition: transform .2s;
+    z-index: 3;
+    pointer-events: auto; 
+}
+
+.sectionBody-button:hover {
+    background-color: #fca311;
+    color: #14213d;
+    transform: scale(1.02);
+}
+
+.sectionBody-icons {
+    color: #e5e5e5;
+    position: relative;
+    top: 0.15em;
+    margin-right: 1em;
+}
+
+.fa-copy {
+    color: black;
+}
+
+section {
+    margin-bottom: 4em;
+}
+
+/* FOOTER STYLES */
+
+#footerDate, #footerTime {
+    font-size: large;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 5em;
+    padding-bottom: 2em;
+    line-height: 0.7em;
+}
+
+
+
+/* DEVICE SPECIFIC */
+
+@media screen and (max-width: 450px) {
+    #Name {
+        font-size: xx-large;
+    }
+
+    .sectionBody-button {
+        font-size: large;
+    }
+    #bitcoinAddress {
+        font-size: large;
+        letter-spacing: 0.1em;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .sectionBody-button {
+        width: 75%;
+    }
+    #bitcoinAddress {
+        width: 75%;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sectionBody-button {
+        width: 60%;
+    }
+    #bitcoinAddress {
+        width: 60%;
+        overflow: scroll;
+    }
+}
